@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zélie Blanc — Psychologue clinicienne · Grésy-sur-Aix</title>
-<meta name="description" content="Zélie Blanc, psychologue clinicienne et psychothérapeute à Grésy-sur-Aix. Approche intégrative et humaniste. Séances en cabinet ou en plein air.">
+<title>Qui suis-je — Zélie Blanc, psychologue</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Work+Sans:wght@300;400;500&display=swap');
 
@@ -150,116 +149,47 @@ nav {
 }
 
 
-/* HERO */
-#hero {
-  padding-top: 62px;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
+.page-hero {
+  padding: 8rem 0 4rem;
+  background: white;
 }
 
-.hero-bg {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  z-index: 0;
-}
-
-/* Blob décoratif haut droite */
-.hero-bg::before {
-  content: '';
-  position: absolute;
-  top: -80px; right: -100px;
-  width: 500px; height: 500px;
-  border-radius: 50%;
-  background: radial-gradient(ellipse, rgba(200,213,176,0.2) 0%, transparent 70%);
-}
-
-.hero-bg::after {
-  content: '';
-  position: absolute;
-  bottom: -60px; left: -80px;
-  width: 350px; height: 350px;
-  border-radius: 50%;
-  background: radial-gradient(ellipse, rgba(212,149,127,0.12) 0%, transparent 70%);
-}
-
-.hero-inner {
-  position: relative;
-  z-index: 1;
+.parcours-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-  width: 100%;
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 4rem 1.5rem;
-}
-
-.hero-text .hero-tag {
-  display: inline-block;
-  font-size: 0.78rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--canard);
-  background: rgba(26,107,138,0.08);
-  border: 1px solid rgba(26,107,138,0.2);
-  padding: 0.35rem 0.9rem;
-  border-radius: 2rem;
-  margin-bottom: 1.5rem;
-}
-
-.hero-text h1 { margin-bottom: 1.5rem; }
-
-.hero-photo {
-  position: relative;
-}
-
-.hero-photo img {
-  width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
-  border-radius: 50% 40% 50% 40%;
-  display: block;
-  box-shadow: 0 12px 40px rgba(26,107,138,0.15);
-}
-
-.hero-photo::before {
-  content: '';
-  position: absolute;
-  inset: -8px;
-  border-radius: 50% 40% 50% 40%;
-  border: 2px solid var(--amande);
-  opacity: 0.5;
-}
-
-/* APPROCHE */
-.approche-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+  gap: 3rem;
+  align-items: start;
   margin-top: 2rem;
 }
 
-.approche-card {
-  background: white;
-  border-radius: 12px;
-  padding: 1.5rem;
-  border-left: 3px solid var(--amande);
-  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+.formations {
+  margin-top: 2rem;
 }
 
-.approche-card.c2 { border-left-color: var(--canard); }
-.approche-card.c3 { border-left-color: var(--terra); }
-.approche-card.c4 { border-left-color: var(--sable); }
+.formation-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid #F0EBE3;
+}
+
+.formation-item:last-child { border-bottom: none; }
+
+.formation-date {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  color: var(--canard);
+  font-size: 0.85rem;
+  white-space: nowrap;
+  padding-top: 2px;
+  min-width: 60px;
+}
+
+.formation-titre { font-weight: 500; font-size: 0.95rem; color: var(--ink); }
+.formation-desc { font-size: 0.88rem; color: var(--ink-soft); margin-top: 0.2rem; line-height: 1.5; }
 
 @media (max-width: 600px) {
-  .hero-inner { grid-template-columns: 1fr; }
-  .hero-photo { order: -1; max-width: 280px; margin: 0 auto; }
-  .approche-grid { grid-template-columns: 1fr; }
+  .parcours-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -269,51 +199,48 @@ nav {
   <div class="nav-inner">
     <a href="index.html" class="nav-name">Zélie Blanc</a>
     <ul class="nav-links">
-      <li><a href="index.html" class="active">Accueil</a></li>
-      <li><a href="qui-suis-je.html" >Qui suis-je</a></li>
+      <li><a href="index.html" >Accueil</a></li>
+      <li><a href="qui-suis-je.html" class="active">Qui suis-je</a></li>
       <li><a href="seances.html" >Les séances</a></li>
     </ul>
   </div>
 </nav>
 
-<section id="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-inner">
-    <div class="hero-text">
-      <span class="hero-tag">Psychologue clinicienne · Psychothérapeute</span>
-      <h1>Zélie Blanc<br><em>psychologue</em></h1>
-      <p style="font-size:1.05rem; margin-bottom:2rem;">Cabinet à Grésy-sur-Aix · Séances en cabinet ou en plein air</p>
-      <a href="mailto:zelieblancpsy@gmail.com" class="btn">Prendre rendez-vous</a>
-    </div>
-    <div class="hero-photo">
-      <img src="images/portrait.jpg" alt="Zélie Blanc, psychologue clinicienne">
-    </div>
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">Qui suis-je</span>
+    <h1>Un parcours <em>atypique</em></h1>
   </div>
 </section>
 
-<section id="approche">
+<section>
   <div class="wrap reveal">
-    <span class="eyebrow">Mon approche</span>
-    <h2>Intégrative et centrée sur vous</h2>
-    <p>Mon approche est intégrative, c'est-à-dire qu'elle est construite à partir de plusieurs théories, et que je peux utiliser plusieurs techniques pour vous accompagner.</p>
-    <p>Mais le facteur le plus important dans le succès d'une thérapie est la qualité de l'alliance thérapeutique entre le psychologue et le patient ; c'est pourquoi le ressenti de l'un et de l'autre, dès la première rencontre, est une donnée cruciale à prendre en compte.</p>
-
-    <div class="approche-grid">
-      <div class="approche-card">
-        <h3>Écoute inconditionnelle</h3>
-        <p>Un espace confidentiel où vous pouvez vous exprimer librement, sans crainte d'être jugé·e.</p>
+    <div class="parcours-grid">
+      <div>
+        <h2>Mon parcours</h2>
+        <p>J'ai entrepris des études de psychologie de zéro en 2021. Venue à la psychologie dans un parcours de reconversion professionnelle, j'ai acquis au fil de ce cursus exigeant la conviction que cette profession me correspondait tout à fait.</p>
+        <p>J'ai 47 ans et trois enfants. Cette expérience de vie — les transitions, les remises en question, le quotidien concret — fait partie de ce que j'apporte dans ma pratique.</p>
+        <p>Diplômée d'un Master de psychologie parcours Clinique et psychothérapies, j'ai suivi des enseignements d'hypnose, de thérapie systémique et de thérapies humanistes en plus du tronc commun.</p>
       </div>
-      <div class="approche-card c2">
-        <h3>Rythme individualisé</h3>
-        <p>Chaque parcours est unique. Nous avançons à votre rythme, selon vos besoins du moment.</p>
-      </div>
-      <div class="approche-card c3">
-        <h3>Techniques adaptées</h3>
-        <p>Pas une méthode unique — les outils sont choisis en fonction de ce que vous traversez et de vos objectifs.</p>
-      </div>
-      <div class="approche-card c4">
-        <h3>Alliance thérapeutique</h3>
-        <p>La qualité de la relation entre nous est au fondement de l'efficacité du travail thérapeutique.</p>
+      <div>
+        <h2>Formation continue</h2>
+        <p>Je suis en formation permanente pour enrichir mon panel d'outils et mieux vous accompagner.</p>
+        <div class="formations">
+          <div class="formation-item">
+            <div class="formation-date">Sept. 2026</div>
+            <div>
+              <div class="formation-titre">IMO — Intégration par les Mouvements Oculaires</div>
+              <div class="formation-desc">Technique de retraitement des mémoires traumatiques par stimulations bilatérales alternées, similaire à l'EMDR. Elle permet de désensibiliser les souvenirs douloureux et de réduire leur emprise émotionnelle.</div>
+            </div>
+          </div>
+          <div class="formation-item">
+            <div class="formation-date">Oct. 2026</div>
+            <div>
+              <div class="formation-titre">ICV — Intégration du Cycle de la Vie</div>
+              <div class="formation-desc">Approche qui vise à replacer les expériences difficiles dans une ligne de vie cohérente et apaisée. Elle aide à intégrer les traumatismes en les resituant dans leur contexte temporel, réduisant ainsi leur charge émotionnelle au présent.</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
