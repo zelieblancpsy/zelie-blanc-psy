@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zélie Blanc — Psychologue clinicienne & psychothérapeute · Grésy-sur-Aix</title>
+<meta name="description" content="Zélie Blanc, psychologue clinicienne et psychothérapeute à Grésy-sur-Aix. Suivi individuel adultes, adolescents, enfants. Séances en cabinet ou en plein air.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --canard:     #1A6B8A;
+  --canard-dk:  #155674;
+  --amande:     #C8D5B0;
+  --amande-dk:  #A8B890;
+  --cream:      #F5EEE4;
+  --cream-deep: #EDE3D4;
+  --terra:      #D4957F;
+  --sable:      #E2D5C0;
+  --ink:        #2A2822;
+  --ink-soft:   #5A5348;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: #FFFFFF;
+  color: var(--ink);
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--ink);
+}
+h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1.2rem; }
+h3 { font-size: 1.1rem; font-weight: 500; margin-bottom: 0.4rem; }
+h1 em { font-style: italic; font-weight: 300; color: var(--canard); }
+
+.eyebrow {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  color: var(--canard);
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+p { color: var(--ink-soft); margin-bottom: 1rem; }
+p:last-child { margin-bottom: 0; }
+a { color: var(--canard); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.wrap { max-width: 720px; margin: 0 auto; padding: 0 1.5rem; }
+section { padding: 5rem 0; }
+/* sections alternées supprimées */
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.93);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--sable);
+}
+.nav-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-name {
+  font-family: 'Fraunces', serif;
+  font-size: 1rem;
+  color: var(--ink);
+}
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.nav-links a:hover { color: var(--canard); text-decoration: none; }
+
+/* HERO */
+#hero {
+  padding-top: 7rem;
+  padding-bottom: 5rem;
+  background: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+#hero::before {
+  content: '';
+  position: absolute;
+  top: -80px; right: -100px;
+  width: 480px; height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center,
+    rgba(200,213,176,0.22) 0%,
+    rgba(26,107,138,0.08) 45%,
+    transparent 100%);
+  pointer-events: none;
+}
+#hero::after {
+  content: '';
+  position: absolute;
+  bottom: -60px; left: -80px;
+  width: 320px; height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center,
+    rgba(212,149,127,0.12) 0%,
+    transparent 70%);
+  pointer-events: none;
+}
+.hero-content { position: relative; z-index: 1; }
+
+.hero-tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--canard);
+  background: rgba(26,107,138,0.08);
+  border: 1px solid rgba(26,107,138,0.2);
+  padding: 0.35rem 0.9rem;
+  border-radius: 2rem;
+  margin-bottom: 1.8rem;
+}
+.hero-title { margin-bottom: 1.5rem; }
+.hero-intro {
+  font-size: 1.1rem;
+  max-width: 540px;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+}
+.hero-cta {
+  display: inline-block;
+  background: var(--canard);
+  color: white;
+  padding: 0.85rem 2rem;
+  border-radius: 3rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  transition: background 0.2s, transform 0.2s;
+}
+.hero-cta:hover {
+  background: var(--canard-dk);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+/* APPROCHE */
+.approche-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.approche-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border-left: 3px solid var(--amande);
+}
+.approche-card.c2 { border-left-color: var(--canard); }
+.approche-card.c3 { border-left-color: var(--terra); }
+.approche-card.c4 { border-left-color: var(--sable); }
+
+/* SÉANCES */
+.seances-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.seance-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+.seance-icon { font-size: 2rem; margin-bottom: 0.8rem; display: block; }
+
+/* DÉROULEMENT */
+.etapes { margin-top: 2rem; display: flex; flex-direction: column; }
+.etape {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  position: relative;
+  padding-bottom: 2rem;
+}
+.etape:last-child { padding-bottom: 0; }
+.etape:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 18px; top: 40px; bottom: 0;
+  border-left: 1px dashed var(--sable);
+}
+.etape-num {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: var(--canard);
+  color: white;
+  font-family: 'Fraunces', serif;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* CABINET */
+.cabinet-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.info-block { background: white; border-radius: 12px; padding: 1.5rem; }
+.info-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--canard);
+  margin-bottom: 0.6rem;
+  display: block;
+}
+.badge-soon {
+  display: inline-block;
+  font-size: 0.75rem;
+  background: var(--cream-deep);
+  color: var(--ink-soft);
+  padding: 0.2rem 0.6rem;
+  border-radius: 1rem;
+  margin-top: 0.3rem;
+}
+
+/* CONTACT */
+#contact {
+  background: var(--canard);
+  color: white;
+  text-align: center;
+}
+#contact h2 { color: white; }
+#contact p { color: rgba(255,255,255,0.82); }
+.contact-email {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background: white;
+  color: var(--canard);
+  padding: 0.85rem 2rem;
+  border-radius: 3rem;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: transform 0.2s;
+}
+.contact-email:hover { transform: translateY(-1px); text-decoration: none; }
+
+/* FOOTER */
+footer {
+  background: var(--ink);
+  color: rgba(255,255,255,0.45);
+  text-align: center;
+  padding: 2rem 1.5rem;
+  font-size: 0.8rem;
+}
+
+/* REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible { opacity: 1; transform: none; }
+
+@media (max-width: 600px) {
+  .nav-links { display: none; }
+  .approche-grid, .seances-grid, .cabinet-info { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <span class="nav-name">Zélie Blanc</span>
+    <ul class="nav-links">
+      <li><a href="#approche">Approche</a></li>
+      <li><a href="#seances">Séances</a></li>
+      <li><a href="#deroulement">Déroulement</a></li>
+      <li><a href="#cabinet">Cabinet</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section id="hero">
+  <div class="wrap hero-content">
+    <span class="hero-tag">Psychologue clinicienne · Psychothérapeute</span>
+    <h1 class="hero-title">
+      Un espace pour vous,<br><em>tel que vous êtes.</em>
+    </h1>
+    <p class="hero-intro">
+      Je vous accompagne dans les moments de vie difficiles — doutes, souffrance, transitions — avec une attention portée à votre vécu, à votre singularité, à votre rythme.
+    </p>
+    <a href="#contact" class="hero-cta">Prendre rendez-vous</a>
+  </div>
+</section>
+
+<section id="approche">
+  <div class="wrap reveal">
+    <span class="eyebrow">Mon approche</span>
+    <h2>Une présence au cœur de votre expérience</h2>
+    <p>Mon orientation est humaniste, phénoménologique et existentielle. Je pars du principe que chaque personne est experte de son propre vécu, et qu'elle mérite d'être rencontrée dans toute sa subjectivité — sans étiquette, sans jugement.</p>
+    <p>La thérapie n'est pas là pour "guérir" ou corriger, mais pour créer un espace où ce qui est difficile peut être accueilli, mis en mots, traversé.</p>
+    <div class="approche-grid">
+      <div class="approche-card">
+        <h3>Écoute inconditionnelle</h3>
+        <p>Un espace confidentiel où vous pouvez vous exprimer librement, sans crainte d'être jugé·e.</p>
+      </div>
+      <div class="approche-card c2">
+        <h3>Rythme individualisé</h3>
+        <p>Chaque parcours est unique. Nous avançons à votre rythme, selon vos besoins du moment.</p>
+      </div>
+      <div class="approche-card c3">
+        <h3>Centré sur votre vécu</h3>
+        <p>Votre expérience subjective est au centre — pas les catégories, pas les protocoles.</p>
+      </div>
+      <div class="approche-card c4">
+        <h3>Alliance thérapeutique</h3>
+        <p>La relation que nous construisons ensemble est au fondement du travail thérapeutique.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="seances">
+  <div class="wrap reveal">
+    <span class="eyebrow">Les séances</span>
+    <h2>En cabinet ou en plein air</h2>
+    <p>Je propose deux cadres de consultation, selon vos préférences et vos besoins.</p>
+    <div class="seances-grid">
+      <div class="seance-card">
+        <span class="seance-icon">🏡</span>
+        <h3>En cabinet</h3>
+        <p>Un espace calme et confidentiel, à Grésy-sur-Aix, pour des séances en face à face dans un cadre contenant et bienveillant.</p>
+      </div>
+      <div class="seance-card">
+        <span class="seance-icon">🌿</span>
+        <h3>En plein air</h3>
+        <p>Marcher et parler. Certaines personnes trouvent plus de liberté dans le mouvement et la nature. Une alternative au bureau, quand cela fait sens.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="deroulement">
+  <div class="wrap reveal">
+    <span class="eyebrow">Le déroulement</span>
+    <h2>Comment ça se passe ?</h2>
+    <div class="etapes">
+      <div class="etape">
+        <div class="etape-num">1</div>
+        <div>
+          <h3>Un premier contact</h3>
+          <p>Vous m'écrivez par email pour vous présenter brièvement et exprimer ce qui vous amène. Je vous réponds dans les 48h pour convenir d'un rendez-vous.</p>
+        </div>
+      </div>
+      <div class="etape">
+        <div class="etape-num">2</div>
+        <div>
+          <h3>La première séance</h3>
+          <p>Un moment d'échange pour que je comprenne votre situation, et pour que vous puissiez sentir si le cadre vous convient. Aucun engagement au-delà.</p>
+        </div>
+      </div>
+      <div class="etape">
+        <div class="etape-num">3</div>
+        <div>
+          <h3>Le suivi</h3>
+          <p>Si nous décidons de travailler ensemble, nous définissons ensemble la fréquence et les modalités qui vous correspondent le mieux.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cabinet">
+  <div class="wrap reveal">
+    <span class="eyebrow">Le cabinet</span>
+    <h2>Où me trouver</h2>
+    <div class="cabinet-info">
+      <div class="info-block">
+        <span class="info-label">Adresse</span>
+        <p style="margin:0;">800 route des Bauges<br>73100 Grésy-sur-Aix</p>
+      </div>
+      <div class="info-block">
+        <span class="info-label">Téléphone</span>
+        <p style="margin:0; color: var(--ink-soft);">À venir</p>
+        <span class="badge-soon">Disponible prochainement</span>
+      </div>
+      <div class="info-block">
+        <span class="info-label">Prise de rendez-vous</span>
+        <p style="margin:0;">Par email : <a href="mailto:zelieblancpsy@gmail.com">zelieblancpsy@gmail.com</a></p>
+      </div>
+      <div class="info-block">
+        <span class="info-label">Tarifs</span>
+        <p style="margin:0; color: var(--ink-soft);">Renseignements sur demande.<br>Possibilité de tarif adapté.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap reveal">
+    <span class="eyebrow" style="color: rgba(255,255,255,0.7);">Prendre rendez-vous</span>
+    <h2>Faisons connaissance</h2>
+    <p>Vous pouvez m'écrire pour une première prise de contact, sans engagement. Je réponds dans les 48h.</p>
+    <a href="mailto:zelieblancpsy@gmail.com" class="contact-email">zelieblancpsy@gmail.com</a>
+  </div>
+</section>
+
+<footer>
+  <p>Zélie Blanc — Psychologue clinicienne &amp; psychothérapeute · Grésy-sur-Aix</p>
+  <p style="margin-top:0.4rem;">N° RPPS : à venir · Enregistrée ARS Auvergne-Rhône-Alpes</p>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
