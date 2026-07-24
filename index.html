@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zélie Blanc — Psychologue clinicienne · Grésy-sur-Aix</title>
-<meta name="description" content="Zélie Blanc, psychologue clinicienne et psychothérapeute à Grésy-sur-Aix. Approche intégrative et humaniste. Séances en cabinet ou en plein air.">
+<meta name="description" content="Zélie Blanc, psychologue clinicienne à Grésy-sur-Aix. Approche intégrative et humaniste. Séances en cabinet ou en plein air.">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Work+Sans:wght@300;400;500&display=swap');
 
@@ -13,7 +13,6 @@
   --canard-dk:  #155674;
   --amande:     #C8D5B0;
   --amande-dk:  #A8B890;
-  --cream:      #F5EEE4;
   --terra:      #D4957F;
   --sable:      #E2D5C0;
   --ink:        #2A2822;
@@ -36,7 +35,7 @@ body {
 }
 
 h1, h2, h3 { font-family: 'Fraunces', serif; font-weight: 400; line-height: 1.2; color: var(--ink); }
-h1 { font-size: clamp(2rem, 5vw, 3rem); }
+h1 { font-size: clamp(1.6rem, 3.5vw, 2.2rem); }
 h2 { font-size: clamp(1.4rem, 3vw, 1.9rem); margin-bottom: 1.2rem; }
 h3 { font-size: 1.05rem; font-weight: 500; margin-bottom: 0.4rem; }
 h1 em, h2 em { font-style: italic; font-weight: 300; color: var(--canard); }
@@ -141,15 +140,6 @@ nav {
 }
 .btn:hover { background: var(--canard-dk); text-decoration: none; transform: translateY(-1px); }
 
-@media (max-width: 600px) {
-  .nav-links { display: none; }
-  .footer-inner { grid-template-columns: 1fr; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .reveal { opacity: 1; transform: none; transition: none; }
-}
-
-
 /* HERO */
 #hero {
   padding-top: 62px;
@@ -166,7 +156,6 @@ nav {
   z-index: 0;
 }
 
-/* Blob décoratif haut droite */
 .hero-bg::before {
   content: '';
   position: absolute;
@@ -189,7 +178,7 @@ nav {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr auto;
   gap: 4rem;
   align-items: center;
   width: 100%;
@@ -198,45 +187,36 @@ nav {
   padding: 4rem 1.5rem;
 }
 
-.hero-text .hero-tag {
-  display: inline-block;
-  font-size: 0.78rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--canard);
-  background: rgba(26,107,138,0.08);
-  border: 1px solid rgba(26,107,138,0.2);
-  padding: 0.35rem 0.9rem;
-  border-radius: 2rem;
-  margin-bottom: 1.5rem;
-}
-
-.hero-text h1 { margin-bottom: 1.5rem; }
+.hero-text h1 { margin-bottom: 1rem; }
 
 .hero-photo {
   position: relative;
+  width: 220px;
+  height: 220px;
+  flex-shrink: 0;
 }
 
 .hero-photo img {
-  width: 280px;
-  height: 280px;
-  object-fit: cover;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center top;
   display: block;
-  box-shadow: 0 12px 40px rgba(26,107,138,0.15);
+  box-shadow: 0 8px 30px rgba(26,107,138,0.15);
+  position: relative;
+  z-index: 1;
 }
 
-.hero-photo::before {
-  content: '';
+.hero-photo svg {
   position: absolute;
-  top: -8px;
-  left: -8px;
-  right: -8px;
-  bottom: -8px;
-  border-radius: 50%;
-  border: 2px solid var(--amande);
-  opacity: 0.5;
+  top: -16px;
+  left: -16px;
+  width: 252px;
+  height: 252px;
+  z-index: 0;
+  pointer-events: none;
 }
 
 /* APPROCHE */
@@ -260,9 +240,14 @@ nav {
 .approche-card.c4 { border-left-color: var(--sable); }
 
 @media (max-width: 600px) {
+  .nav-links { display: none; }
+  .footer-inner { grid-template-columns: 1fr; }
   .hero-inner { grid-template-columns: 1fr; }
-  .hero-photo { order: -1; max-width: 280px; margin: 0 auto; }
+  .hero-photo { width: 160px; height: 160px; margin: 0 auto; }
   .approche-grid { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
 }
 </style>
 </head>
@@ -273,8 +258,8 @@ nav {
     <a href="index.html" class="nav-name">Zélie Blanc</a>
     <ul class="nav-links">
       <li><a href="index.html" class="active">Accueil</a></li>
-      <li><a href="qui-suis-je.html" >Qui suis-je</a></li>
-      <li><a href="seances.html" >Les séances</a></li>
+      <li><a href="qui-suis-je.html">Qui suis-je</a></li>
+      <li><a href="seances.html">Les séances</a></li>
     </ul>
   </div>
 </nav>
@@ -289,6 +274,11 @@ nav {
     </div>
     <div class="hero-photo">
       <img src="images/portrait.jpg" alt="Zélie Blanc, psychologue clinicienne">
+      <svg viewBox="0 0 252 252" xmlns="http://www.w3.org/2000/svg">
+        <path d="M126 18 C160 14 195 28 212 58 C230 90 228 130 210 158 C192 186 160 202 126 200 C92 198 60 182 44 154 C26 124 28 84 48 56 C68 28 92 22 126 18 Z" fill="none" stroke="#C8D5B0" stroke-width="1.5" opacity="0.7"/>
+        <path d="M126 10 C148 8 172 16 188 30" fill="none" stroke="#C8D5B0" stroke-width="1" opacity="0.4"/>
+        <path d="M62 190 C78 204 100 212 126 212" fill="none" stroke="#D4957F" stroke-width="1" opacity="0.35"/>
+      </svg>
     </div>
   </div>
 </section>
@@ -325,7 +315,7 @@ nav {
   <div class="footer-inner">
     <div class="footer-info">
       <h4>Zélie Blanc</h4>
-      <p>Psychologue clinicienne &amp; psychothérapeute</p>
+      <p>Psychologue clinicienne</p>
       <p>800 route des Bauges<br>73100 Grésy-sur-Aix</p>
       <p><a href="mailto:zelieblancpsy@gmail.com">zelieblancpsy@gmail.com</a></p>
       <p style="margin-top:1rem; font-size:0.8rem; color:rgba(255,255,255,0.35);">N° RPPS : à venir</p>
@@ -339,9 +329,10 @@ nav {
     </div>
   </div>
   <div class="footer-bottom">
-    Zélie Blanc © 2026 · Psychologue clinicienne &amp; psychothérapeute · Grésy-sur-Aix
+    Zélie Blanc © 2026 · Psychologue clinicienne · Grésy-sur-Aix
   </div>
 </footer>
+
 <script>
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
